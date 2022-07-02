@@ -1,6 +1,13 @@
 <script>
 	import SvelteTable from 'svelte-table';
 	export let data;
+	import { goto } from '$app/navigation';
+
+	function handleClick(event) {
+		let path = event.detail.row.id;
+        console.log(path)
+		goto('/' + path);
+	}
 
 	const columns = [
 		{
@@ -44,6 +51,6 @@
 
 <div>
 	{#await data then brew}
-		<SvelteTable {columns} rows={brew} />
+		<SvelteTable {columns} rows={brew} on:clickRow={handleClick} />
 	{/await}
 </div>
