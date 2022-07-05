@@ -10,12 +10,6 @@
 
 	const columns = [
 		{
-			key: 'id',
-			title: 'ID',
-			value: (v) => v.id,
-			sortable: false
-		},
-		{
 			key: 'machine',
 			title: 'MACHINE',
 			value: (v) => v.machine,

@@ -5,7 +5,9 @@
 	import AddBrewButton from '$lib/AddBrewButton.svelte';
 	import BrewTable from '$lib/BrewTable.svelte';
 	import { brews } from '../stores/brewStores.js';
-    
+    import Footer from '$lib/Footer.svelte'
+    import Header from '$lib/Header.svelte'
+
 
 	user.set(supabase.auth.user());
 
@@ -15,6 +17,7 @@
 </script>
 
 <div>
+    <Header />
 	<h1>Brew It ☕️</h1>
 	<h2>A place for coffee lovers to share their brews</h2>
 	<BrewTable data={$brews} />
@@ -25,4 +28,5 @@
 	{:else}
 		<Auth />
 	{/if}
+    <Footer />
 </div>
