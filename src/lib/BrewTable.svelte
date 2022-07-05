@@ -23,7 +23,7 @@
 		},
 		{
 			key: 'water_type',
-			title: 'WATER_TYPE',
+			title: 'WATER',
 			value: (v) => v.water_type,
 			sortable: false
 		},
@@ -48,8 +48,13 @@
 	];
 </script>
 
-<div>
+<div
+class="rounded border-2 min-w-full p-2"
+>
 	{#await data then brew}
-		<SvelteTable {columns} rows={brew} on:clickRow={handleClick} />
+		<SvelteTable {columns} rows={brew} on:clickRow={handleClick} 
+        classNameRow='border justify-center hover:bg-quin'
+        classNameThead=''
+        />
 	{/await}
 </div>

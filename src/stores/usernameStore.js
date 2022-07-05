@@ -3,9 +3,8 @@ import { supabase } from '$lib/supabaseClient.js';
 export const username = writable([]);
 
 
-
-export const loadUserInfo = async (usermail) => {
-	const { data, error } = await supabase.from('users').select().eq('mail', usermail )
+export const loadUserInfo = async (email) => {
+	const { data, error } = await supabase.from('users').select().eq('mail', email )
 	if (error) {
 		return console.error(error);
 	}

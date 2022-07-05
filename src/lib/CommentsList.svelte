@@ -18,8 +18,13 @@
 				<p class="p-2 border-2 border-sec">{c.comment}</p>
 
 				<p class=" p-2 border-2 border-pri">
+					{#if c.user === ''}
+					Unknown user
+					<Time relative timestamp={c.createdAt} />
+					{:else}
 					{c.user}
 					<Time relative timestamp={c.createdAt} />
+					{/if}
 				</p>
 			{/each}
 		{/if}

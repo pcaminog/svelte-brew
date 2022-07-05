@@ -8,7 +8,7 @@ module.exports = {
       sec: "#F4AFAB",
       ter: "#EFDAD7",
       cuar: "#603813",
-      quin: '#b29f94',
+      quin: '#A9A9A9',
     },
     fontFamily: {
       mono: ["monospace"],

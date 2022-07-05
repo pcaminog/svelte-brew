@@ -5,7 +5,8 @@
 
 	const path = $page.params.brew;
 
-	let loading = false;
+
+    console.log($user.email)
 
 	let comment = {
 		user: '',
@@ -25,5 +26,5 @@
 <form on:submit|preventDefault={handleSubmit}>
 	<h1>Comment</h1>
 	<input type="text" bind:value={comment.comment} />
-	<input type="submit" value={loading ? 'Loading' : 'Add a Comment'} disabled={loading} />
+	<input type="submit" value={'Add a Comment'} />
 </form>
