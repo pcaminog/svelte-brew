@@ -19,16 +19,17 @@
 		brew = '';
 	};
 
-  loadBrews()
+	loadBrews();
 </script>
 
-<div>
-	<p>MACHINE 🤖</p>
-	<p>MODEL ⚙️</p>
-	<p>WATER 💧</p>
-	<p>COFFEE 🫘</p>
-	<p>GRAMS ⚖️</p>
-	<p>TIME ⏱</p>
+<div class=" items-center justify-center grid grid-cols-6  grid-rows-2 gap-5 p-6 gap-y-0">
+	<p class="font-extrabold text-2xl">MACHINE 🤖</p>
+	<p class="font-extrabold text-2xl">MODEL ⚙️</p>
+	<p class="font-extrabold text-2xl">WATER 💧</p>
+	<p class="font-extrabold text-2xl">COFFEE 🫘</p>
+	<p class="font-extrabold text-2xl">GRAMS ⚖️</p>
+	<p class="font-extrabold text-2xl">TIME ⏱</p>
+
 	<input
 		id="machine"
 		maxLength={50}

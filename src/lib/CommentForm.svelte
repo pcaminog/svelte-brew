@@ -1,28 +1,25 @@
 <script>
-import { brew } from '../stores/brewStores.js';
-
-    import { addComments } from '../stores/commentStore.js'
-    import { user } from '../stores/sessionStore.js';
+	import { addComments } from '../stores/commentStore.js';
+	import { user } from '../stores/sessionStore.js';
 	import { page } from '$app/stores';
 
 	const path = $page.params.brew;
 
 	let loading = false;
 
-    let comment = {
+	let comment = {
 		user: '',
 		comment: '',
 		email: $user.email,
-        brewId: path
+		brewId: path
 	};
 
-    //console.log(comment)
+	//console.log(comment)
 
 	const handleSubmit = () => {
 		addComments(comment);
 		comment = '';
 	};
-
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>

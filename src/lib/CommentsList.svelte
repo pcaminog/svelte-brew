@@ -2,23 +2,26 @@
 	import { loadComments } from '../stores/commentStore.js';
 	import { page } from '$app/stores';
 	export let datacom;
-	import Time from "svelte-time";
-
+	import Time from 'svelte-time';
 
 	const path = $page.params.brew;
 
 	loadComments(path);
-	//console.log(datacom)
 </script>
 
-<div>
+<div class="rounded border-2 min-w-full p-2">
 	{#await datacom then com}
-		{#each com as c}
-			<p>{c.comment}</p>
-			<p>{c.user}</p>
-			<p>{c.createdAt}</p>
-			<Time relative timestamp={c.createdAt}/>
-		{/each}
-	{/await}
+		{#if com.length === 0}
+			No comments! Please be the first one to add a comment 👆
+		{:else}
+			{#each com as c}
+				<p class="p-2 border-2 border-sec">{c.comment}</p>
 
+				<p class=" p-2 border-2 border-pri">
+					{c.user}
+					<Time relative timestamp={c.createdAt} />
+				</p>
+			{/each}
+		{/if}
+	{/await}
 </div>
