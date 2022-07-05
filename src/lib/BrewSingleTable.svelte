@@ -2,22 +2,18 @@
 	import SvelteTable from 'svelte-table';
 	import { page } from '$app/stores';
 	import { loadBrew } from '../stores/brewStores.js';
-	export let data
+	export let databrew;
 
+	const path = $page.params.brew;
 
-	const path = $page.params.brew
-
-	loadBrew(path)
-
+	loadBrew(path);
 
 	const columns = [
 		{
 			key: 'id',
 			title: 'ID',
 			value: (v) => v.id,
-			sortable: false,
-			filterOptions: [path], 
-
+			sortable: false
 		},
 		{
 			key: 'machine',
@@ -59,8 +55,7 @@
 </script>
 
 <div>
-	{#await data then brew}
-		<SvelteTable {columns} rows={brew}
-		/>
+	{#await databrew then brew}
+		<SvelteTable {columns} rows={brew} />
 	{/await}
 </div>

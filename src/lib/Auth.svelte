@@ -19,18 +19,12 @@
   </script>
   
   <form on:submit|preventDefault={handleLogin}>
-    <div>
       <h1>Brew It Login</h1>
       <p>Sign in via magic link with your email below</p>
-      <div>
         <input
           type="email"
           placeholder="Your email"
           bind:value={email}
         />
-      </div>
-      <div>
-        <input type="submit" class='button block' value={loading ? "Loading" : "Send magic link"} disabled={loading} />
-      </div>
-    </div>
+        <input type="submit"value={loading ? "Loading" : "Send magic link"} disabled={loading} />
   </form>
