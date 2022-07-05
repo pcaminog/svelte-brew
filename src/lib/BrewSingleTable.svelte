@@ -1,14 +1,24 @@
 <script>
 	import SvelteTable from 'svelte-table';
-	export let data;
-	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+	import { loadBrew } from '../stores/brewStores.js';
+	export let data
 
-	function handleClick(event) {
-		let path = event.detail.row.id;
-		goto('/' + path);
-	}
+
+	const path = $page.params.brew
+
+	loadBrew(path)
+
 
 	const columns = [
+		{
+			key: 'id',
+			title: 'ID',
+			value: (v) => v.id,
+			sortable: false,
+			filterOptions: [path], 
+
+		},
 		{
 			key: 'machine',
 			title: 'MACHINE',
@@ -50,6 +60,7 @@
 
 <div>
 	{#await data then brew}
-		<SvelteTable {columns} rows={brew} on:clickRow={handleClick} />
+		<SvelteTable {columns} rows={brew}
+		/>
 	{/await}
 </div>
