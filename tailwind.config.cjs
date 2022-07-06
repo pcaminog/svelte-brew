@@ -6,9 +6,9 @@ module.exports = {
     colors: {
       pri: "#B7D3F2",
       sec: "#F4AFAB",
-      ter: "#EFDAD7",
-      cuar: "#603813",
-      quin: '#A9A9A9',
+      blanco: "#FFFFFF",
+      negro: "#000000",
+      gris: '#EEEEEE',
     },
     fontFamily: {
       mono: ["monospace"],

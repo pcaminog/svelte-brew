@@ -20,9 +20,11 @@
 	class="grid grid-cols-2 font-mon mt-0 font-bold text-2xl border-b-2 w-full justify-around justify-self-start sticky top-0"
 >
 	{#if $user}
-		<div class=" m-3">Brew It</div>
-		<div class=" m-3 place-self-end">
-			<button on:click={handleClick}>⚙️</button>
+		<div class="m-3">Brew It</div>
+		<div class="m-3 place-self-end">
+			<button 
+			class="border p-1"
+			on:click={handleClick}>Settings ⚙️</button>
 			{#await loadUserInfo($user.email) then mail}
 				{#if mail[0].user === null}
 					{$user.email}

@@ -13,8 +13,6 @@
 	};
 
 	const handleSubmit = () => {
-		console.log($user);
-		console.log(brew);
 		addBrew(brew);
 		brew = '';
 	};
@@ -70,6 +68,6 @@ class=" grid grid-cols-1"
 	class=" text-base border-2 rounded p-1" id="time" type="number" max={999} placeholder="In seconds" bind:value={brew.time} />
 </div>
 	<button 
-class="text-base border-2 rounded p-1 w-1/5 justify-self-center hover:bg-pri"
-	on:click|preventDefault={handleSubmit}> Add it </button>
+class="text-base border-2 rounded p-1 w-1/5 justify-self-center hover:bg-negro hover:text-blanco animate-pulse "
+	on:click|preventDefault={handleSubmit}> Add it ＋ </button>
 </div>

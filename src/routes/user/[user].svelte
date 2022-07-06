@@ -8,11 +8,11 @@
 	let usr = loadUserInfo(path);
 </script>
 
-<div class="flex flex-col border-collapse overflow-y-hidden">
+<div>
 	<div class="flex items-center justify-center h-screen font-mono">
-		<div class="grid place-items-center w-3/4 gap-10 m-5">
+		<div class="grid place-items-center w-2/4 h-2/3 gap-10 m-5 border">
 			<h1
-            class=" text-5xl">User Settings</h1>
+            class=" text-5xl underline">User Settings</h1>
 			{#await usr then u}
 				<div class=" text-2xl">User email: {u[0].email}</div>
 				<div class=" text-2xl">User name: {u[0].user}</div>

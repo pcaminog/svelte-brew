@@ -53,7 +53,7 @@ class="rounded border-2 min-w-full p-2 text-xl"
 >
 	{#await data then brew}
 		<SvelteTable {columns} rows={brew} on:clickRow={handleClick} 
-        classNameRow='border items-center hover:bg-quin'
+        classNameRow='border items-center hover:bg-gris  place-items-center'
         />
 	{/await}
 </div>
