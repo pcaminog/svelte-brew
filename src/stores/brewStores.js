@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { supabase } from '$lib/supabaseClient.js';
+import { supabase } from '../utils/supabaseClient.js';
 export const brews = writable([]);
 export const brew = writable([]);
 

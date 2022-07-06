@@ -49,12 +49,11 @@
 </script>
 
 <div
-class="rounded border-2 min-w-full p-2"
+class="rounded border-2 min-w-full p-2 text-xl"
 >
 	{#await data then brew}
 		<SvelteTable {columns} rows={brew} on:clickRow={handleClick} 
-        classNameRow='border justify-center hover:bg-quin'
-        classNameThead=''
+        classNameRow='border items-center hover:bg-quin'
         />
 	{/await}
 </div>

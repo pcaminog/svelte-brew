@@ -5,9 +5,6 @@
 
 	const path = $page.params.brew;
 
-
-    console.log($user.email)
-
 	let comment = {
 		user: '',
 		comment: '',
@@ -19,7 +16,12 @@
 
 	const handleSubmit = () => {
 		addComments(comment);
-		comment = '';
+		comment = {
+			user: '',
+			comment: '',
+			email: $user.email,
+			brewId: path
+		};
 	};
 </script>
 

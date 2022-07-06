@@ -1,6 +1,6 @@
 <script>
 	import { user } from '../stores/sessionStore.js';
-	import { supabase } from '$lib/supabaseClient.js';
+	import { supabase } from '../utils/supabaseClient.js';
 	import Auth from '$lib/Auth.svelte';
 	import AddBrewButton from '$lib/AddBrewButton.svelte';
 	import BrewTable from '$lib/BrewTable.svelte';
@@ -15,15 +15,24 @@
 	});
 </script>
 
-<div>
+<div
+class="flex flex-col border-collapse overflow-y-hidden"
+
+>
 	<Header />
 	<div class="flex items-center justify-center h-screen font-mono">
 		<div class="grid place-items-center w-3/4 gap-10 m-5">
-			<h1>Brew It ☕️</h1>
-			<h2>A place for coffee lovers to share their brews</h2>
+			<h1
+            class=" text-5xl"
+            >Brew It ☕️</h1>
+			<h2
+            class=" text-2xl"
+            >A place for coffee lovers to share their brews</h2>
 			<BrewTable data={$brews} />
 
-			<p>Add your recipe</p>
+			<p
+            class=" text-2xl"
+            >Add your recipe 👇</p>
 			{#if $user}
 				<AddBrewButton />
 			{:else}
