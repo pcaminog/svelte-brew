@@ -19,8 +19,7 @@
 </script>
 
 <div
-class="flex flex-col border-collapse overflow-y-hidden"
->
+class="flex flex-col h-screen border-collapse overflow-hidden">
 	<Header />
 	<div class="flex items-center justify-center h-screen font-mono overflow-y-scroll">
 		<div class="grid place-items-center w-3/4 gap-10 m-5">

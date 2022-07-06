@@ -17,7 +17,7 @@
 </script>
 
 <div
-	class=" grid grid-cols-2 gap-3 font-mon mt-0 font-bold text-2xl border-b-2 w-full justify-around justify-self-start"
+	class="grid grid-cols-2 font-mon mt-0 font-bold text-2xl border-b-2 w-full justify-around justify-self-start sticky top-0"
 >
 	{#if $user}
 		<div class=" m-3">Brew It</div>
