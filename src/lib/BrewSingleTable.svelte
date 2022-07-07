@@ -48,8 +48,12 @@
 	];
 </script>
 
-<div>
+<div
+class="rounded border-2 min-w-full p-2 text-xl"
+>
 	{#await databrew then brew}
-		<SvelteTable {columns} rows={brew} />
+		<SvelteTable {columns} rows={brew}         
+		classNameRow='border rounded items-center hover:bg-gris place-items-center'
+		/>
 	{/await}
 </div>

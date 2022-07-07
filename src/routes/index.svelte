@@ -15,9 +15,9 @@
 	});
 </script>
 
-<div class="flex flex-col h-screen border-collapse overflow-hidden">
+<div class="flex flex-col h-screen overflow-hidden">
 	<Header />
-	<div class="flex items-center justify-center font-mono overflow-y-scroll">
+	<div class="realtive font-mono overflow-y-scroll top-2/4 translate-x-40 ">
 		<div class="grid place-items-center w-3/4 gap-10 m-5">
 			<h1 class="text-5xl">Brew It ☕️</h1>
 			<h2 class="text-2xl">A place for coffee lovers to share their brews</h2>

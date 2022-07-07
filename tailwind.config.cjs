@@ -5,7 +5,7 @@ module.exports = {
     extend: {},
     colors: {
       pri: "#B7D3F2",
-      sec: "#F4AFAB",
+      silver: "#FEFCF2",
       blanco: "#FFFFFF",
       negro: "#000000",
       gris: '#EEEEEE',
