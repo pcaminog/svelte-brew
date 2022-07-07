@@ -2,9 +2,9 @@
 	import { loadComments } from '../stores/commentStore.js';
 	import { page } from '$app/stores';
 	export let datacom;
-	import Time from 'svelte-time';
 
 	const path = $page.params.brew;
+//					<Time relative timestamp={c.createdAt} />
 
 	loadComments(path);
 </script>
@@ -20,10 +20,8 @@
 				<p class=" p-2 border-2 border-pri">
 					{#if c.user === ''}
 					Unknown user
-					<Time relative timestamp={c.createdAt} />
 					{:else}
 					{c.user}
-					<Time relative timestamp={c.createdAt} />
 					{/if}
 				</p>
 			{/each}
