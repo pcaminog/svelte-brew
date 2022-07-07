@@ -9,7 +9,7 @@
 	loadComments(path);
 </script>
 
-<div class="rounded border-2 min-w-full p-2">
+<div class="rounded border-2 w-3/4 p-2">
 	{#await datacom then com}
 		{#if com.length === 0}
 			No comments! Please be the first one to add a comment 👆
