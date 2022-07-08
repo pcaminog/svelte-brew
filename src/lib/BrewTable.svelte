@@ -2,11 +2,14 @@
 	import SvelteTable from 'svelte-table';
 	export let data;
 	import { goto } from '$app/navigation';
+import { loadBrews } from '../stores/brewStores';
 
 	function handleClick(event) {
 		let path = event.detail.row.id;
 		goto('/' + path);
 	}
+
+	loadBrews()
 
 	const columns = [
 		{
@@ -55,9 +58,6 @@ class="rounded border-t-2 border-b-2 min-w-full p-2 text-xl "
 		<SvelteTable {columns} rows={brew} on:clickRow={handleClick} 
 		classNameTable='tablemain'
 		classNameRow=' tablerow hover:bg-gris'
-		classNameHead=' tablehead'
-
-
         />
 	{/await}
 </div>
