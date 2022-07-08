@@ -49,7 +49,7 @@
 </script>
 
 <div
-class="rounded border-2 min-w-full p-2 text-xl"
+class="rounded border-t-2 border-b-2 min-w-full p-2 text-xl "
 >
 	{#await databrew then brew}
 		<SvelteTable {columns} rows={brew}         
