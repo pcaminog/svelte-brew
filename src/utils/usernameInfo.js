@@ -9,3 +9,12 @@ export const loadUserInfo = async (id) => {
 	return(data);
 };
 
+export const updateUserName = async (name, id) => {
+	const { error } = await supabase.from('usernames').update({user: name}).eq('id', id)
+	if (error) {
+		return console.error(error);
+	}
+};
+
+
+
