@@ -28,6 +28,9 @@
 					<BrewSingleTable databrew={$brew} />
 					<CommentForm />
 					<CommentsList datacom={$comments} />
+					<a 
+					class="m-6 p-2 border-2 hover:bg-negro hover:text-blanco animate-pulse"
+					href="/">← Go Home </a>
 				{:else}
 					<Auth />
 				{/if}
