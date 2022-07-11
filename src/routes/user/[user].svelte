@@ -4,6 +4,12 @@
 	import { userinfo } from '../../stores/usernameInfo';
 </script>
 
+<svelte:head>
+	<title>Brew it</title>
+	<meta name="robots" content="noindex nofollow" />
+	<html lang="en" />
+</svelte:head>
+
 <div>
 	<div class="flex flex-col items-center justify-center h-screen font-mono">
 		<div class="grid grid-cols-2 place-items-center w-auto h-auto  border">

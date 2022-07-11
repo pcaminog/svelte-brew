@@ -3,6 +3,12 @@
 	import Footer from '../lib/Footer.svelte';
 </script>
 
+<svelte:head>
+	<title>Brew it</title>
+	<meta name="robots" content="noindex nofollow" />
+	<html lang="en" />
+</svelte:head>
+
 <div>
 	<div class="flex flex-col h-screen border-collapse overflow-hidden">
 		<Header />
