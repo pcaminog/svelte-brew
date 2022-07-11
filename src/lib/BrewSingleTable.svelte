@@ -53,7 +53,7 @@ class="rounded border-t-2 border-b-2 min-w-full p-2 text-xl "
 >
 	{#await databrew then brew}
 		<SvelteTable {columns} rows={brew}         
-		classNameRow='border rounded items-center hover:bg-gris place-items-center'
+		classNameRow=' tablerow hover:bg-gris'
 		/>
 	{/await}
 </div>

@@ -5,7 +5,7 @@ export const comments = writable([]);
 
 
 export const loadComments = async (id) => {
-	const { data, error } = await supabase.from('comments').select().eq( 'brewId', id ).order('createdAt', { ascending: true })
+	const { data, error } = await supabase.from('commentsfull').select().eq( 'brewId', id ).order('createdAt', { ascending: true })
 	if (error) {
 		return console.error(error);
 	}

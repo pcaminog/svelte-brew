@@ -1,11 +1,15 @@
 <script>
 	import { loadComments } from '../stores/commentStore.js';
 	import { page } from '$app/stores';
+	import { loadUserInfo } from '../stores/usernameInfo.js';
+	import { user } from '../stores/sessionStore.js';
+	import Time from "svelte-time";
+
 	export let datacom;
 
 	const path = $page.params.brew;
-//					<Time relative timestamp={c.createdAt} />
 
+	loadUserInfo($user.id);
 	loadComments(path);
 </script>
 
@@ -19,9 +23,10 @@
 
 				<p class=" p-2 border-2 border-pri">
 					{#if c.user === ''}
-					Unknown user
+						Unknown user
 					{:else}
-					{c.user}
+						{c.user}
+						<Time relative timestamp={c.createdAt} />
 					{/if}
 				</p>
 			{/each}
