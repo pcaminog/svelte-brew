@@ -2,7 +2,6 @@
 	import { user } from '../stores/sessionStore.js';
 	import { goto } from '$app/navigation';
 	import { supabase } from '../utils/supabaseClient.js';
-	import logo from '$lib/assets/logo.png';
 
 
 	async function loadUserInfo(email) {
