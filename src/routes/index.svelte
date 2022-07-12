@@ -33,8 +33,6 @@
 					<p class="text-2xl">Add your recipe 👇</p>
 					<AddBrewButton />
 				{:else}
-					<p class="text-2xl">Sign in wiht your emamil below to add any your brews.</p>
-					<p class="text-5xl">👇</p>
 					<Auth />
 				{/if}
 			</div>

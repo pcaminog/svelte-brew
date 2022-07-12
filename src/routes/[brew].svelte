@@ -30,8 +30,9 @@
 			<div class="grid place-items-center w-3/4 gap-10 m-5">
 				<h1 class="text-5xl">Brew It ☕️</h1>
 				<h2 class="text-2xl">A place for coffee lovers to share their brews</h2>
+				<BrewSingleTable databrew={$brew} />
+
 				{#if $user}
-					<BrewSingleTable databrew={$brew} />
 					<CommentForm />
 					<CommentsList datacom={$comments} />
 					<a 
