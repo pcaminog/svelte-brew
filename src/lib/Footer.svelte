@@ -3,9 +3,9 @@
 >
 	<div />
 	<p class=" justify-self-center m-2">
-		Built by Th3st1gh powered by <a href="https://kit.svelte.dev/"> Svelte</a>
+		Built by Th3st1gh with ❤️
 	</p>
-  <p class=" justify-self-center m-2 text-xs">
+  <p class=" justify-self-center m-2 text-base underline ">
 	 <a href="/privatepolicy"> Privacy policy </a>
 	</p>
 </div>
