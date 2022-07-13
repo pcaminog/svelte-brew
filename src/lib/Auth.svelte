@@ -1,38 +1,17 @@
 <script>
 	import { supabase } from '../utils/supabaseClient.js';
+	import Auth from 'supabase-ui-svelte'
 
-	let loading = false;
+
 	let email;
 
-	const handleLogin = async () => {
-		try {
-			loading = true;
-			const { error } = await supabase.auth.signIn({ email });
-			if (error) throw error;
-			alert('Check your email for the login link!');
-		} catch (error) {
-			alert(error.error_description || error.message);
-		} finally {
-			loading = false;
-		}
-	};
 </script>
 
-<form on:submit|preventDefault={handleLogin} class="place-items-center grid gap-5 m-10">
+<div class="place-items-center grid gap-5 m-10">
 	<div class="text-2xl">Do you want to add your brew? or add any comment?</div>
-  <div class="text-2xl">Sign in with your email</div>
+	<div class="text-2xl">Sign in with your email</div>
 	<div class="text-5xl">👇</div>
 
-	<input
-		class=" text-base border-2 rounded p-1"
-		type="email"
-		placeholder="Your email"
-		bind:value={email}
-	/>
-	<input
-		class="text-base border-2 rounded p-1 justify-self-center hover:bg-negro hover:text-blanco animate-pulse "
-		type="submit"
-		value={loading ? 'Loading' : 'Send magic link'}
-		disabled={loading}
-	/>
-</form>
+	<Auth supabaseClient={supabase} view="magic_link" providers={['google']} socialColors/>
+
+</div>
